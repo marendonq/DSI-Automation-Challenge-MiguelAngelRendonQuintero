@@ -20,6 +20,15 @@ if image_loc:
     print("Se encontró la imagen y se le dio click")
 else:
     print("Imagen no encontrada")
+"""
+mañana me voy a encargar de crear la ruta para que pyautogui:
+
+    - abra el explorador de archivos (win + e)
+    - acceda a una carpeta en especifico buscandola
+    - luego debe de abrir la carpeta, tomar capturas del contenido del archivo (mirar si se puede integrar de una vez con tesser act para realiza un mvp)
+    - al finalizar el archivo, debe salir, bajar el mouse al siguiente documento en el explorador de archivos y repetir
+    - iniciar desarrollo de la API por medio de FastAPI 
+"""
     
 
 
