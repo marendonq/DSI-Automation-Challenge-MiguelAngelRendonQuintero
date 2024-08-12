@@ -1,5 +1,8 @@
 import os
 
+
+
+
 def resolve_path(relative_path: str) -> str:
     """
     Resuelve una ruta relativa a una ruta absoluta basada en el archivo actual o el directorio de trabajo actual.
@@ -23,15 +26,3 @@ def resolve_path(relative_path: str) -> str:
     absolute_path = os.path.join(base_path, relative_path)
 
     return os.path.abspath(absolute_path)
-
-import pytesseract
-from PIL import Image
-from utils.image_preprocessing import preprocess_image
-
-image_path = resolve_path("resources/final_processed_image.png")
-preprocessed_image = preprocess_image(image_path)
-
-img = Image.open(image_path)
-ocr_result = pytesseract.image_to_string(img)
-
-print(ocr_result)

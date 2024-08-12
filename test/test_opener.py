@@ -33,3 +33,31 @@ except Exception as e:
     print(f"Ocurrió un error: {e}")
 
 """
+
+ 
+
+
+"""
+mañana me voy a encargar de crear la ruta para que pyautogui:
+
+    - abra el explorador de archivos (win + e)
+    - acceda a una carpeta en especifico buscandola
+    - luego debe de abrir la carpeta, tomar capturas del contenido del archivo (mirar si se puede integrar de una vez con tesser act para realiza un mvp)
+    - al finalizar el archivo, debe salir, bajar el mouse al siguiente documento en el explorador de archivos y repetir
+    - iniciar desarrollo de la API por medio de FastAPI 
+"""
+import os
+    
+from automation.opener import locate_and_click
+
+image_path = os.path.join(os.path.dirname(__file__), '../resources/edge_logo.png') if '__file__' in locals() else os.path.join(os.getcwd(), 'resources/edge_logo.png')
+
+if locate_and_click(image_path, grayscale=True, confidence=0-8):
+    print("La imagen se encontró y se realizó la acción.")
+else:
+    print("No se encontró la imagen o hubo un error.")
+
+
+
+
+
